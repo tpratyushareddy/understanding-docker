@@ -1,0 +1,9 @@
+FROM centos:7
+
+RUN yum install python3 -y
+RUN yum install git -y
+RUN git clone https://github.com/tpratyushareddy/understanding-jenkins.git
+WORKDIR understanding-jenkins
+
+ENTRYPOINT [ "python3", "add.py"]
+CMD ["3", "9"]
